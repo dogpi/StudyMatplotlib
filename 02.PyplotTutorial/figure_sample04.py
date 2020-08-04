@@ -6,15 +6,15 @@ values = [1, 10, 100]
 # 设置figure大小，单位英寸
 plt.figure(figsize=(9, 3))
 
-# 131:1行三列中的1列位置
+# 131:1行三列中的第1个位置
 plt.subplot(131)
 # 条形图
 plt.bar(names, values)
-# 132:1行3列中的2列位置
+# 132:1行3列中的第2个位置
 plt.subplot(132)
 # 散点图
 plt.scatter(names, values)
-# 133:1行三列中的3列位置
+# 133:1行三列中的第3个位置
 plt.subplot(133)
 # 线状图
 plt.plot(names, values)
