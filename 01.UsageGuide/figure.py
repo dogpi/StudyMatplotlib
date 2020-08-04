@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+import numpy as np
 # fig = plt.figure("hello figure")
 # fig.suptitle("No axes on this figure")
 
