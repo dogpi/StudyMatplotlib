@@ -17,13 +17,19 @@ pc_kwargs = {'rasterized': True, 'cmap': 'viridis', 'norm': norm}
 # axs[2]为非列表
 # fig.colorbar(im, ax=axs[2], shrink=0.6)
 
-fig, axs = plt.subplots(3, 1, figsize=(4, 4), constrained_layout=True)
-for ax in axs[:2]:
+# fig, axs = plt.subplots(3, 1, figsize=(4, 4), constrained_layout=True)
+# for ax in axs[:2]:
+#     im = ax.pcolormesh(arr, **pc_kwargs)
+# # axs[:2]为列表
+# fig.colorbar(im, ax=axs[:2], shrink=0.6)
+# im = axs[2].pcolormesh(arr, **pc_kwargs)
+# # [axs[2]]为列表
+# fig.colorbar(im, ax=[axs[2]], shrink=0.6)
+
+fig, axs = plt.subplots(2, 2, figsize=(4, 4), constrained_layout=True)
+for ax in axs.flat:
     im = ax.pcolormesh(arr, **pc_kwargs)
-# axs[:2]为列表
-fig.colorbar(im, ax=axs[:2], shrink=0.6)
-im = axs[2].pcolormesh(arr, **pc_kwargs)
-# [axs[2]]为列表
-fig.colorbar(im, ax=[axs[2]], shrink=0.6)
+fig.colorbar(im, ax=axs, shrink=0.6)
+fig.suptitle('Big Suptitle')
 
 plt.show()
